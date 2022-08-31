@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM & EVENTS- part1</title>
+</head>
+<style>
+    .background{
+        background-color: lightgreen;
+    }
+</style>
+<body id="bg" >
+    <center>
+    <div>
+        <form action=""onsubmit="vaild()">
+
+            <input type="text" placeholder="Username" id="uname"><br>
+            <input type="password" placeholder="Psaaword" id="psw"><br>
+            <button type="submit">LOGIN</button>
+            <p>Not registred?<a href="www.google.com">Create New Account</a></p>
+        </form>
+    </div>
+    </center>
+    <script>
+        function vaild(){
+            var u = document.getElementById('uname').value;
+            var p = document.getElementById('psw').value;
+            console.log(u);
+            console.log(p);
+            if(u == "admin" && p == "123"){
+                alert("Welcome");
+            }else{
+                alert("invaild Username or password ");
+            }
+        }
+    </script>
+
+</body>
+</html>
